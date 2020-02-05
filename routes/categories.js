@@ -7,6 +7,12 @@ const Category = require('../models/categories/categories-model.js');
 const categories = new Category();
 
 
+router.get('/', getCategories);
+router.post('/', postCategories);
+router.get('/:id', getCategories);
+router.put('/:id', putCategories);
+router.delete('/:id', deleteCategories);
+
 
 function getCategories(req, res, next) {
     categories.get()
